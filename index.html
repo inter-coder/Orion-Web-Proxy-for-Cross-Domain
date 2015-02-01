@@ -1,0 +1,174 @@
+<style>
+	table{
+		background:gray;
+		color:white;
+	}
+	tr.response td{
+		background-repeat:no-repeat;
+		background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA0MCA0MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEuNDE0MjE7IiB4PSIwcHgiIHk9IjBweCI+CiAgICA8ZGVmcz4KICAgICAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWwogICAgICAgICAgICBALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7CiAgICAgICAgICAgICAgZnJvbSB7CiAgICAgICAgICAgICAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIHRvIHsKICAgICAgICAgICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoLTM1OWRlZykKICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgQGtleWZyYW1lcyBzcGluIHsKICAgICAgICAgICAgICBmcm9tIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIHRvIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKC0zNTlkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIHN2ZyB7CiAgICAgICAgICAgICAgICAtd2Via2l0LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7CiAgICAgICAgICAgICAgICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAxLjVzIGxpbmVhciBpbmZpbml0ZTsKICAgICAgICAgICAgICAgIC13ZWJraXQtYmFja2ZhY2UtdmlzaWJpbGl0eTogaGlkZGVuOwogICAgICAgICAgICAgICAgYW5pbWF0aW9uOiBzcGluIDEuNXMgbGluZWFyIGluZmluaXRlOwogICAgICAgICAgICB9CiAgICAgICAgXV0+PC9zdHlsZT4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJvdXRlciI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCwwQzIyLjIwNTgsMCAyMy45OTM5LDEuNzg4MTMgMjMuOTkzOSwzLjk5MzlDMjMuOTkzOSw2LjE5OTY4IDIyLjIwNTgsNy45ODc4MSAyMCw3Ljk4NzgxQzE3Ljc5NDIsNy45ODc4MSAxNi4wMDYxLDYuMTk5NjggMTYuMDA2MSwzLjk5MzlDMTYuMDA2MSwxLjc4ODEzIDE3Ljc5NDIsMCAyMCwwWiIgc3R5bGU9ImZpbGw6YmxhY2s7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNNS44NTc4Niw1Ljg1Nzg2QzcuNDE3NTgsNC4yOTgxNSA5Ljk0NjM4LDQuMjk4MTUgMTEuNTA2MSw1Ljg1Nzg2QzEzLjA2NTgsNy40MTc1OCAxMy4wNjU4LDkuOTQ2MzggMTEuNTA2MSwxMS41MDYxQzkuOTQ2MzgsMTMuMDY1OCA3LjQxNzU4LDEzLjA2NTggNS44NTc4NiwxMS41MDYxQzQuMjk4MTUsOS45NDYzOCA0LjI5ODE1LDcuNDE3NTggNS44NTc4Niw1Ljg1Nzg2WiIgc3R5bGU9ImZpbGw6cmdiKDIxMCwyMTAsMjEwKTsiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCwzMi4wMTIyQzIyLjIwNTgsMzIuMDEyMiAyMy45OTM5LDMzLjgwMDMgMjMuOTkzOSwzNi4wMDYxQzIzLjk5MzksMzguMjExOSAyMi4yMDU4LDQwIDIwLDQwQzE3Ljc5NDIsNDAgMTYuMDA2MSwzOC4yMTE5IDE2LjAwNjEsMzYuMDA2MUMxNi4wMDYxLDMzLjgwMDMgMTcuNzk0MiwzMi4wMTIyIDIwLDMyLjAxMjJaIiBzdHlsZT0iZmlsbDpyZ2IoMTMwLDEzMCwxMzApOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTI4LjQ5MzksMjguNDkzOUMzMC4wNTM2LDI2LjkzNDIgMzIuNTgyNCwyNi45MzQyIDM0LjE0MjEsMjguNDkzOUMzNS43MDE5LDMwLjA1MzYgMzUuNzAxOSwzMi41ODI0IDM0LjE0MjEsMzQuMTQyMUMzMi41ODI0LDM1LjcwMTkgMzAuMDUzNiwzNS43MDE5IDI4LjQ5MzksMzQuMTQyMUMyNi45MzQyLDMyLjU4MjQgMjYuOTM0MiwzMC4wNTM2IDI4LjQ5MzksMjguNDkzOVoiIHN0eWxlPSJmaWxsOnJnYigxMDEsMTAxLDEwMSk7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMy45OTM5LDE2LjAwNjFDNi4xOTk2OCwxNi4wMDYxIDcuOTg3ODEsMTcuNzk0MiA3Ljk4NzgxLDIwQzcuOTg3ODEsMjIuMjA1OCA2LjE5OTY4LDIzLjk5MzkgMy45OTM5LDIzLjk5MzlDMS43ODgxMywyMy45OTM5IDAsMjIuMjA1OCAwLDIwQzAsMTcuNzk0MiAxLjc4ODEzLDE2LjAwNjEgMy45OTM5LDE2LjAwNjFaIiBzdHlsZT0iZmlsbDpyZ2IoMTg3LDE4NywxODcpOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTUuODU3ODYsMjguNDkzOUM3LjQxNzU4LDI2LjkzNDIgOS45NDYzOCwyNi45MzQyIDExLjUwNjEsMjguNDkzOUMxMy4wNjU4LDMwLjA1MzYgMTMuMDY1OCwzMi41ODI0IDExLjUwNjEsMzQuMTQyMUM5Ljk0NjM4LDM1LjcwMTkgNy40MTc1OCwzNS43MDE5IDUuODU3ODYsMzQuMTQyMUM0LjI5ODE1LDMyLjU4MjQgNC4yOTgxNSwzMC4wNTM2IDUuODU3ODYsMjguNDkzOVoiIHN0eWxlPSJmaWxsOnJnYigxNjQsMTY0LDE2NCk7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYuMDA2MSwxNi4wMDYxQzM4LjIxMTksMTYuMDA2MSA0MCwxNy43OTQyIDQwLDIwQzQwLDIyLjIwNTggMzguMjExOSwyMy45OTM5IDM2LjAwNjEsMjMuOTkzOUMzMy44MDAzLDIzLjk5MzkgMzIuMDEyMiwyMi4yMDU4IDMyLjAxMjIsMjBDMzIuMDEyMiwxNy43OTQyIDMzLjgwMDMsMTYuMDA2MSAzNi4wMDYxLDE2LjAwNjFaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNzQsNzQpOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTI4LjQ5MzksNS44NTc4NkMzMC4wNTM2LDQuMjk4MTUgMzIuNTgyNCw0LjI5ODE1IDM0LjE0MjEsNS44NTc4NkMzNS43MDE5LDcuNDE3NTggMzUuNzAxOSw5Ljk0NjM4IDM0LjE0MjEsMTEuNTA2MUMzMi41ODI0LDEzLjA2NTggMzAuMDUzNiwxMy4wNjU4IDI4LjQ5MzksMTEuNTA2MUMyNi45MzQyLDkuOTQ2MzggMjYuOTM0Miw3LjQxNzU4IDI4LjQ5MzksNS44NTc4NloiIHN0eWxlPSJmaWxsOnJnYig1MCw1MCw1MCk7Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K");
+		background-position:center;
+		
+	}
+</style>
+<script src="//demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
+<body>
+	<h1>SERVER U BUDIMPESTI</h1>
+	<h2>Testiram crossdomain php->curl</h2>
+	<table border="1" style="width: 100%;">
+		<tr>
+			<td colspan="4">Orion server IP</td>
+		</tr>
+		<tr>
+			<td colspan="4"><input id="ocbIP" value="148.6.80.56" style="width:100%;font-weight:bold; text-align: center;"/></td>
+		</tr>
+		<tr>
+			<td>QUERY 1 - append element</td>
+			<td>QUERY 2 - update element</td>
+			<td>QUERY 3 - delete element</td>
+			<td>QUERY 4 - get element</td>
+		</tr>
+		<tr>
+			<td><textarea id="q1" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="q2" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="q3" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="q4" style="width:100%;height:200px;"></textarea></td>
+		</tr>
+		<tr>
+			<td><input type='button' data-q='1' value='Execute Query'/></td>
+			<td><input type='button' data-q='2' value='Execute Query'/></td>
+			<td><input type='button' data-q='3' value='Execute Query'/></td>
+			<td><input type='button' data-q='4' value='Execute Query'/></td>
+		</tr>
+		<tr class="response">
+			<td><textarea id="s1" placeholder="Response 1" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="s2" placeholder="Response 2" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="s3" placeholder="Response 3" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="s4" placeholder="Response 4" style="width:100%;height:200px;"></textarea></td>
+		</tr>
+	</table>
+</body>
+<script>
+var d1={"contextElements": [
+        {
+            "type": "Room",
+            "isPattern": "false",
+            "id": "Room1",
+            "attributes": [
+            {
+                "name": "temperature",
+                "type": "float",
+                "value": "21"
+            },
+            {
+                "name": "pressure",
+                "type": "integer",
+                "value": "711"
+            }
+            ]
+        }
+    ],
+    "updateAction": "APPEND"
+};
+var d2={
+    "contextElements": [
+        {
+            "type": "Room",
+            "isPattern": "false",
+            "id": "Room1",
+            "attributes": [
+            {
+                "name": "temperature",
+                "type": "float",
+                "value": "30.5"
+            },
+            {
+                "name": "pressure",
+                "type": "integer",
+                "value": "1015"
+            }
+            ]
+        }
+    ],
+    "updateAction": "UPDATE"
+};
+var d3={"contextElements": [
+        {
+            "type": "Room",
+            "isPattern": "false",
+            "id": "Room1"
+        }
+    ],
+    "updateAction": "DELETE"
+};
+var d4={
+    "entities": [
+        {
+            "type": "Room",
+            "isPattern": "false",
+            "id": "Room1"
+        }
+    ]
+};
+$("#q1").val(JSON.stringify(d1));
+$("#q2").val(JSON.stringify(d2));
+$("#q3").val(JSON.stringify(d3));
+$("#q4").val(JSON.stringify(d4));
+
+(function ($) {
+    $.OCB=function(p){
+			/*
+			/  p.url - Specifies the URL to send the request to. Default is the current page
+			/  p.ocbIP - Specifies the Orion Server IP to send the request to. Default is the current server (localhost) 
+			/  p.ocbPort - Specifies the Orion Server Port, Default is the 1026
+			/  p.async - A Boolean value indicating whether the request should be handled asynchronous or not. Default is true
+			/  p.cache - A Boolean value indicating whether the browser should cache the requested pages. Default is true
+			/  p.parm - Server param to deside what to do with data
+			/  p.data - Object of data ex.
+			/  p.success - A function to be run when the request succeeds
+			/  p.error - A function to run if the request fails.
+			/  p.timeout - The local timeout (in milliseconds) for the request, Default is the 10000ms (10s)
+			*/
+			if(p==undefined)return false;
+			$.ajax({
+			  url: p.url==undefined?"":p.url,
+			  timeout:p.timeout==undefined?10000:p.timeout,
+			  type:p.type==undefined?"POST":p.type,
+			  cache: p.cache==undefined?false:p.cache,
+			  data:{
+			  	"data":JSON.stringify(p.data),
+			  	"ocbIP":p.ocbIP==undefined?"localhost":p.ocbIP, 
+			  	"ocbPort":p.ocbPort==undefined?1026:p.ocbPort,
+			  	"context":p.data.updateAction!=undefined?"updateContext":"queryContext",
+			  },
+			  success:p.success==""?false:p.success,
+			  error:p.error==""?false:p.error
+			});
+		};
+}(jQuery));
+
+function capture_sensor_data(ocbIP,data,q){
+	$("#s"+q).hide();
+	$.OCB({
+		url:"server/ajax.php",
+		parm:"upit",
+		type:"POST",
+		ocbIP:ocbIP,
+		data:data,
+		success:function(data){
+			console.log(data);
+			$("#s"+q).val(JSON.stringify(data));
+			$("#s"+q).fadeIn(1000);
+		},
+		error:function(xhr,status,error){
+			console.log(xhr,status,error);
+		}
+	});
+}
+
+$("[type='button']").on("click",function(){
+	var q=$(this).attr("data-q");
+	var ocbIP=$("#ocbIP").val();
+	var data=JSON.parse($("#q"+q).val());
+	capture_sensor_data(ocbIP,data,q);
+});
+</script>
