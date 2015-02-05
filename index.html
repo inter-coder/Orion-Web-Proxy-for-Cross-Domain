@@ -17,7 +17,7 @@
 			<td colspan="4">Orion server IP</td>
 		</tr>
 		<tr>
-			<td colspan="4"><input id="ocbIP" value="X.X.X.X" style="width:100%;font-weight:bold; text-align: center;"/></td>
+			<td colspan="4"><input id="ocbIP" value="148.6.80.56" style="width:100%;font-weight:bold; text-align: center;"/></td>
 		</tr>
 		<tr>
 			<td>QUERY 1 - append element</td>
@@ -137,6 +137,7 @@ $("#q4").val(JSON.stringify(d4));
 			  	"ocbIP":p.ocbIP==undefined?"localhost":p.ocbIP, 
 			  	"ocbPort":p.ocbPort==undefined?1026:p.ocbPort,
 			  	"context":p.data.updateAction!=undefined?"updateContext":"queryContext",
+			  	"push":p.data.updateAction=="PUSH"?true:false
 			  },
 			  success:p.success==""?false:p.success,
 			  error:p.error==""?false:p.error
