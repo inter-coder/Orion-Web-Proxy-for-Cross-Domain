@@ -16,7 +16,7 @@ FEATURES
 * Entity creation - APPEND
 * Entity edit - UPDATE
 * Entity push data - PUSH
-* Entity push data - SPLICE
+* Entity push data - UNSET
 * Entity delete - DELETE
 * Entity query
 * There is also an option of using Curl applications from the console
@@ -102,7 +102,7 @@ It is not possible to insert more than one member of the set of values,
 but there is no limit to the depth and structure of the added data
 
 
-### Entity edit - SPLICE
+### Entity edit - UNSET
 ```javascript
 var element={
 		"contextElements": [
@@ -119,7 +119,7 @@ var element={
 	            ]
 	        }
 	    ],
-	    "updateAction": "SPLICE"
+	    "updateAction": "UNSET"
 	}
 ```
 ### Entity edit - DELETE
