@@ -98,7 +98,7 @@ var element={
 	}
 ```
 #### limitations:
-It is not possible to insert more than one member of the set of values,
+It is not possible to insert more than one member of the set of values in single push,
 but there is no limit to the depth and structure of the added data
 
 
