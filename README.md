@@ -2,6 +2,7 @@ Orion-Web-Proxy-for-Cross-Domain
 ================================
 
 PHP & JS scripts that allows you to create crossdomain queries with JSON to the Orion (Orion Context Broker - Fi-Ware) server 
+
 Generating query is compatible with the guidelines that were set up on the [official instruction](http://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/Publish/Subscribe_Broker_-_Orion_Context_Broker_-_User_and_Programmers_Guide#Additional_information_and_resources)
 
 INCLUDES
@@ -19,8 +20,7 @@ FEATURES
 * Entity query
 * There is also an option of using Curl applications from the console
 
-Entity creation - APPEND
-========================
+### Entity creation - APPEND
 ```javascript
 var element={"contextElements": [
 	        {
@@ -50,8 +50,7 @@ var element={"contextElements": [
 	    "updateAction": "APPEND"
 	}
 ```
-Entity edit - UPDATE
-====================
+### Entity edit - UPDATE
 ```javascript
 var element={
 	    "contextElements": [
@@ -71,8 +70,7 @@ var element={
 	    "updateAction": "UPDATE"
 	}
 ```
-Entity edit - PUSH
-==================
+### Entity edit - PUSH
 ```javascript
 var element={
 		"contextElements": [
@@ -98,8 +96,7 @@ var element={
 	    "updateAction": "PUSH"
 	}
 ```
-Entity edit - DELETE
-====================
+### Entity edit - DELETE
 ```javascript
 var element={
 			"contextElements": [
@@ -112,8 +109,7 @@ var element={
 	    "updateAction": "DELETE"
 	}
 ```
-Entity query
-============
+### Entity query
 ```javascript
 var element={
 	    "entities": [
@@ -143,8 +139,7 @@ $.OCB({
 	});
 ```
 
-Curl example from the console
-=============================
+### Curl example from the console
 With vars:
 ```
 ocbIP="x.x.x.x" 
