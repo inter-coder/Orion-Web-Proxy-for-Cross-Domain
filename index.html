@@ -15,15 +15,16 @@
 <body>
 	<table border="1" style="width: 100%;">
 		<tr>
-			<td colspan="4">Orion server IP</td>
+			<td colspan="6">Orion server IP</td>
 		</tr>
 		<tr>
-			<td colspan="4"><input id="ocbIP" value="x.x.x.x" style="width:100%;font-weight:bold; text-align: center;"/></td>
+			<td colspan="6"><input id="ocbIP" value="x.x.x.x" style="width:100%;font-weight:bold; text-align: center;"/></td>
 		</tr>
 		<tr>
 			<td>QUERY 1 - append element</td>
 			<td>QUERY 2 - update element</td>
-			<td>QUERY 3 - push value</td>
+			<td>QUERY 3/1 - push value</td>
+			<td>QUERY 3/2 - unset value</td>
 			<td>QUERY 4 - delete element</td>
 			<td>QUERY 5 - get element</td>
 		</tr>
@@ -31,6 +32,7 @@
 			<td><textarea id="q1" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="q2" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="q3" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="q31" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="q4" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="q5" style="width:100%;height:200px;"></textarea></td>
 		</tr>
@@ -38,13 +40,15 @@
 			<td><input type='button' data-q='1' value='Execute Query'/></td>
 			<td><input type='button' data-q='2' value='Execute Query'/></td>
 			<td><input type='button' data-q='3' value='Execute Query'/></td>
+			<td><input type='button' data-q='31' value='Execute Query'/></td>
 			<td><input type='button' data-q='4' value='Execute Query'/></td>
 			<td><input type='button' data-q='5' value='Execute Query'/></td>
 		</tr>
 		<tr class="response">
 			<td><textarea id="s1" placeholder="Response 1" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="s2" placeholder="Response 2" style="width:100%;height:200px;"></textarea></td>
-			<td><textarea id="s3" placeholder="Response 3" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="s3" placeholder="Response 3/1" style="width:100%;height:200px;"></textarea></td>
+			<td><textarea id="s31" placeholder="Response 3/2" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="s4" placeholder="Response 4" style="width:100%;height:200px;"></textarea></td>
 			<td><textarea id="s5" placeholder="Response 4" style="width:100%;height:200px;"></textarea></td>
 		</tr>
@@ -118,6 +122,23 @@ var someData={
 	        }
 	    ],
 	    "updateAction": "PUSH"
+	},
+	"q31":{
+		"contextElements": [
+	        {
+	            "type": "city",
+	            "isPattern": "false",
+	            "id": "Rome",
+	            "attributes": [
+	            {
+	                "name": "temperature",
+	                "type": "array",
+	                "value": [0,2]
+	            }
+	            ]
+	        }
+	    ],
+	    "updateAction": "UNSET"
 	},
 	"q4":{
 			"contextElements": [

@@ -16,6 +16,7 @@ FEATURES
 * Entity creation - APPEND
 * Entity edit - UPDATE
 * Entity push data - PUSH
+* Entity push data - SPLICE
 * Entity delete - DELETE
 * Entity query
 * There is also an option of using Curl applications from the console
@@ -94,6 +95,31 @@ var element={
 	        }
 	    ],
 	    "updateAction": "PUSH"
+	}
+```
+#### limitations:
+It is not possible to insert more than one member of the set of values,
+but there is no limit to the depth and structure of the added data
+
+
+### Entity edit - SPLICE
+```javascript
+var element={
+		"contextElements": [
+	        {
+	            "type": "city",
+	            "isPattern": "false",
+	            "id": "Rome",
+	            "attributes": [
+	            {
+	                "name": "temperature",
+	                "type": "array",
+	                "value": [0,1] // series of indexes from array of values that should be removed
+	            }
+	            ]
+	        }
+	    ],
+	    "updateAction": "SPLICE"
 	}
 ```
 ### Entity edit - DELETE
