@@ -18,12 +18,11 @@
 			  timeout:p.timeout==undefined?10000:p.timeout,
 			  type:p.type==undefined?"POST":p.type,
 			  cache: p.cache==undefined?false:p.cache,
+			  param:p.param==undefined?false:p.param,
 			  data:{
 			  	"data":JSON.stringify(p.data),
 			  	"ocbIP":p.ocbIP==undefined?"localhost":p.ocbIP, 
 			  	"ocbPort":p.ocbPort==undefined?1026:p.ocbPort,
-			  	"context":p.data.updateAction!=undefined?"updateContext":"queryContext",
-			  	"push":p.data.updateAction=="PUSH"?true:false
 			  },
 			  success:p.success==""?false:p.success,
 			  error:p.error==""?false:p.error

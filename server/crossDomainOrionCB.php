@@ -3,13 +3,17 @@ header('Content-type: application/json');
 header('Access-Control-Allow-Origin: *');
 ini_set('error_reporting', E_ALL );
 function objectToArray($d) {if (is_object($d)) {$d = get_object_vars($d);}if (is_array($d)) {return array_map(__FUNCTION__, $d);}else {return $d;}}
-if($_POST['push']=="true"){
-	$d=json_decode($_POST['data']);
-	$p=objectToArray($d);
+
+$d=json_decode($_POST['data']);
+$p=objectToArray($d);
+if($p["updateAction"]=="PUSH"){$_POST['push']="true";}else{$_POST['push']="false";};
+if($p["updateAction"]!=NULL){$_POST['context']="updateContext";}else{$_POST['context']="queryContext";};
+
+if($_POST['push']=="true"){	
 	$type=$p["contextElements"][0]["type"];
 	$isPattern=$p["contextElements"][0]["isPattern"];
 	$id=$p["contextElements"][0]["id"];
-	$query="(curl ".$_POST['ocbIP'].":".$_POST['ocbPort']."/ngsi10/queryContext"." -s -S --header 'Content-Type: application/json' --header 'Accept: application/json' -d @- | python -mjson.tool)";
+	$query="(curl ".trim($_POST['ocbIP']).":".trim($_POST['ocbPort'])."/ngsi10/queryContext"." -s -S --header 'Content-Type: application/json' --header 'Accept: application/json' -d @- | python -mjson.tool)";
 	$query=$query.' <<EOF 
 '.'{"entities":[{"type":"'.$type.'","isPattern":"'.$isPattern.'","id":"'.$id.'"}]}'.' 
 EOF';
@@ -30,9 +34,9 @@ EOF';
 	$_POST['data']=json_encode($p);
 }
 
-$query="(curl ".$_POST['ocbIP'].":".$_POST['ocbPort']."/ngsi10/".$_POST['context']." -s -S --header 'Content-Type: application/json' --header 'Accept: application/json' -d @- | python -mjson.tool)";
+$query="(curl ".trim($_POST['ocbIP']).":".trim($_POST['ocbPort'])."/ngsi10/".trim($_POST['context'])." -s -S --header 'Content-Type: application/json' --header 'Accept: application/json' -d @- | python -mjson.tool)";
 $query=$query.' <<EOF 
-'.$_POST['data'].' 
+'.trim($_POST['data']).' 
 EOF';
 $output = shell_exec($query);
 die($output);
