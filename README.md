@@ -132,7 +132,7 @@ $.OCB({
 		url:"server/crossDomainOrionCB.php",
 		parm:"some params ...",
 		type:"POST",
-		ocbIP:"x.x.x.x",//ip of Orion server
+		ocbIP:"x.x.x.x",//Specifies the Orion Server IP to send the request to. Default is the current server (localhost) 
 		data:element,
 		success:function(data){
 			console.log(xhr,status,error);//return respons from Orion server
@@ -145,6 +145,17 @@ $.OCB({
 
 Curl example from the console
 =============================
+With vars:
+```
+ocbIP="x.x.x.x" //Specifies the Orion Server IP to send the request to. Default is the current server (localhost) 
+ocbPort="1026"//Specifies the Orion Server Port, Default is the 1026
+URL="http://localhost/Orion-Web-Proxy-for-Cross-Domain/server/crossDomainOrionCB.php"//Specifies the URL to send the request to. Default is the current page
+
+curl --data 'data={"contextElements":[{"type":"city","isPattern":"false","id":"Rome"}],"updateAction":"DELETE"}&ocbIP='$ocbIP'&ocbPort='$ocbPort'
+' $URL
+```
+
+Or like this:
 ```javascript
 curl --data 'data={"contextElements":[{"type":"city","isPattern":"false","id":"Rome"}],"updateAction":"DELETE"}&ocbIP=148.6.80.56&ocbPort=1026
 ' http://localhost/Orion-Web-Proxy-for-Cross-Domain/server/crossDomainOrionCB.php
