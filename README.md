@@ -21,10 +21,10 @@ FEATURES
 * Entity query
 * There is also an option of using Curl applications from the console
 
-TODO
-====
+### TODO
+
 * Entity push data - PUSH + OBSERVER
-observe data offset to trigger server event functions
+observe data offset or limit values to trigger server event functions
 
 ### Entity creation - APPEND
 ```javascript
