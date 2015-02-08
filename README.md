@@ -152,6 +152,59 @@ var element={
 	    ]
 	}
 ```
+### Entity push data - PUSH + OBSERVER
+Not yet tested!
+The basic idea is to define metatags sets to determine how and how the observation parameters and callback functions works.
+
+There are three types of the observer methods:
+* offset -  trigger function if the new value in relation to the previous
+* extreme - trigger function if the new value is out of range
+* target - if the value is equal to a specified
+
+```javascript
+var element={"contextElements": [
+	        {
+	            "type": "city",
+	            "isPattern": "false",
+	            "id": "Rome",
+	            "attributes": [
+	            {
+	                "name": "temperature",
+	                "type": "array",
+	                "metadatas":[{
+	                	"name": "temp",
+	                	"type": "observer",
+	                	"value":"[{'offset':[-5,5],'callback':'function1'},{'extreme':[-25,100],'callback':'function2'}]"
+	                },{
+	                	"name": "batt",
+	                	"type": "observer",
+	                	"value":"[{'target':'15','callback':'functionBattLow'},{'target':5,'callback':'functionBattCritical'}]"
+	                }],
+	                "value": [{
+	                	"time":"00:10:34",
+	                	"temp":"21.0",
+	                	"batt":"99"
+	                },{
+	                	"time":"02:10:34",
+	                	"temp":"18.3",
+	                	"batt":"99"
+	                }]
+	            },
+	            {
+	                "name": "geolocation",
+	                "type": "array",
+	                "value": ["41.9100711","12.5359979"]
+	            }
+	            ]
+	        }
+	    ],
+	    "updateAction": "APPEND"
+	}
+```
+
+
+
+
 
 AJAX query will look like this:
 ```javascript

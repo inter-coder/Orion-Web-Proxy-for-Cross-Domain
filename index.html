@@ -65,12 +65,23 @@ var someData={
 	            {
 	                "name": "temperature",
 	                "type": "array",
+	                "metadatas":[{
+	                	"name": "temp",
+	                	"type": "observer",
+	                	"value":"[{'offset':[-5,5],'callback':'function1'},{'extreme':[-25,100],'callback':'function2'}]"
+	                },{
+	                	"name": "batt",
+	                	"type": "observer",
+	                	"value":"[{'target':'15','callback':'functionBattLow'},{'target':5,'callback':'functionBattCritical'}]"
+	                }],
 	                "value": [{
 	                	"time":"00:10:34",
-	                	"temp":"21.0"
+	                	"temp":"21.0",
+	                	"batt":"99"
 	                },{
 	                	"time":"02:10:34",
-	                	"temp":"18.3"
+	                	"temp":"18.3",
+	                	"batt":"99"
 	                }]
 	            },
 	            {
@@ -110,13 +121,11 @@ var someData={
 	            {
 	                "name": "temperature",
 	                "type": "array",
-	                "value": [{
-	                	"time":"11.12.2015 00:10:34",
-	                	"temp":"21.0"
-	                },{
-	                	"time":"22.12.2015 02:10:34",
-	                	"temp":"18.3"
-	                }]
+	                "value": {
+	                	"time":"00:10:34",
+	                	"temp":"21.0",
+	                	"batt":"99"
+	                }
 	            }
 	            ]
 	        }
