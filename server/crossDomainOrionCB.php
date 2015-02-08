@@ -82,7 +82,6 @@ EOF';
 								}
 							}
 						}
-						var_dump($mv);
 					}				
 				}
 				//**** end observer
