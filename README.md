@@ -215,7 +215,7 @@ $.OCB({
 		ocbIP:"x.x.x.x",//Specifies the Orion Server IP to send the request to. Default is the current server (localhost) 
 		data:element,
 		success:function(data){
-			console.log(xhr,status,error);//return respons from Orion server
+			console.log(data);//return respons from Orion server
 		},
 		error:function(xhr,status,error){
 			console.log(xhr,status,error);//retur ajax error
