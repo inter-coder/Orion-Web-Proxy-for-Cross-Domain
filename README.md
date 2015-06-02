@@ -10,8 +10,7 @@ INCLUDES
 * PHP script - crossDomainOrionCB.php
 * JS script - OCB.js
 
-dependence
-==========
+### Dependencies
 cURL for PHP
 
 ```
