@@ -10,6 +10,13 @@ INCLUDES
 * PHP script - crossDomainOrionCB.php
 * JS script - OCB.js
 
+dependence
+==========
+cURL for PHP
+
+```
+sudo apt-get install php5-curl
+```
 
 FEATURES
 ========
