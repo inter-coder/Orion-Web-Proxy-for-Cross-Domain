@@ -44,7 +44,7 @@ EOF';
 		for ($x=0; $x <count($oo) ; $x++) {			
 			if($pp[$i]["name"]==$oo[$x]["name"] && $pp[$i]["type"]==$oo[$x]["type"]){
 				$lastValue=$oo[$x]["value"][count($oo[$x]["value"])-1];				
-				array_push($oo[$x]["value"],$pp[$i]["value"]);				
+				$oo[$x]["value"]=array_merge($oo[$x]["value"],$pp[$i]["value"]);// fix merging old and new array of data
 				//*** find observer
 				$meta=$oo[$x]["metadatas"];	
 				for ($m=0; $m <count($meta) ; $m++) {
